@@ -3,7 +3,7 @@ FROM node:18
 # RUN mkdir /api
 WORKDIR /ro-api
 
-COPY . .
+# COPY . .
 
 
-CMD [ "node", "bin/www" ]
+# CMD [ "npm", "start" ]
