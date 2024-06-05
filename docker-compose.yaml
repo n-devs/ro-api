@@ -1,0 +1,20 @@
+version: '3' # vs mais atual
+
+services:
+  api:
+    build: ./
+    container_name: ro-api
+    restart: always
+    tty: true
+    working_dir: /ro-api
+    volumes:
+      - ./:/ro-api
+    command: npm start
+    ports:
+      - "7373:7373"
+    networks:
+      - ro-network
+
+networks:
+  ro-network:
+    driver: bridge
